@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15">
+        <animate attributeName="stop-opacity" values="0.15;0.3;0.15" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#050508" stop-opacity="1" />
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#8892b0" />
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.03" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#050508" rx="12" />
+  <rect width="100%" height="100%" fill="url(#bgGlow)" rx="12" />
+  <rect width="100%" height="100%" fill="url(#grid)" rx="12" />
+
+  <!-- Animated Data Streams -->
+  <g opacity="0.4">
+    <line x1="0" y1="80" x2="1200" y2="80" stroke="#00ff88" stroke-width="1" stroke-dasharray="150 1000">
+      <animate attributeName="stroke-dashoffset" from="1200" to="-200" dur="3s" repeatCount="indefinite" />
+    </line>
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="300 800">
+      <animate attributeName="stroke-dashoffset" from="-200" to="1200" dur="4s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Central Graphic -->
+  <g transform="translate(600, 160)">
+    <!-- JUGSEC Logo Mark -->
+    <path d="M-50 -30 L0 0 L0 25 L-50 55 Z" fill="#00d4ff" />
+    <path d="M-10 -30 L40 0 L40 25 L-10 55 Z" fill="#00ff88" opacity="0.9" />
+    
+    <!-- Title -->
+    <text y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="url(#textGrad)" letter-spacing="12" text-anchor="middle">JUGSEC</text>
+    
+    <!-- Subtitle -->
+    <text y="160" font-family="monospace" font-size="16" font-weight="600" fill="#00d4ff" letter-spacing="4" text-anchor="middle">> 1-ON-1 PREMIUM OPTIMIZATION _</text>
+  </g>
+</svg>

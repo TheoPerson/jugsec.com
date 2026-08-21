@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14141e" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="glowBorder1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+    <linearGradient id="glowBorder2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+    <linearGradient id="glowBorder3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3366" />
+      <stop offset="100%" stop-color="transparent" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="2" text-anchor="middle">SYSTEM ARCHITECTURE</text>
+
+  <g transform="translate(40, 100)">
+    <!-- Card 1: Frontend -->
+    <g transform="translate(0, 0)">
+      <rect width="340" height="200" rx="12" fill="url(#cardBg)" stroke="url(#glowBorder1)" stroke-width="2" />
+      <text x="30" y="45" font-family="monospace" font-size="14" fill="#00d4ff" font-weight="bold">01 / FRONTEND</text>
+      <text x="30" y="90" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff">SvelteKit 5</text>
+      <text x="30" y="130" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Ultra-fast SSR, fluid UI</text>
+      <text x="30" y="155" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Tailwind v4 Dark Theme</text>
+    </g>
+    
+    <!-- Card 2: Backend -->
+    <g transform="translate(380, 0)">
+      <rect width="360" height="200" rx="12" fill="url(#cardBg)" stroke="url(#glowBorder2)" stroke-width="2" />
+      <text x="30" y="45" font-family="monospace" font-size="14" fill="#00ff88" font-weight="bold">02 / DATA LAYER</text>
+      <text x="30" y="90" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff">Drizzle + Postgres</text>
+      <text x="30" y="130" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Zero-latency Edge DB</text>
+      <text x="30" y="155" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Bcrypt + JWT Sessions</text>
+    </g>
+
+    <!-- Card 3: AI -->
+    <g transform="translate(780, 0)">
+      <rect width="340" height="200" rx="12" fill="url(#cardBg)" stroke="url(#glowBorder3)" stroke-width="2" />
+      <text x="30" y="45" font-family="monospace" font-size="14" fill="#ff3366" font-weight="bold">03 / INTELLIGENCE</text>
+      <text x="30" y="90" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff">xAI Grok 4.6</text>
+      <text x="30" y="130" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Pre-session spec analysis</text>
+      <text x="30" y="155" font-family="-apple-system, sans-serif" font-size="16" fill="#8892b0">Bottleneck detection</text>
+    </g>
+  </g>
+</svg>

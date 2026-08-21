@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="100%">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff" />
+      <stop offset="50%" stop-color="#00ff88" />
+      <stop offset="100%" stop-color="#ff3366" />
+    </linearGradient>
+  </defs>
+
+  <text x="600" y="40" font-family="-apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="2" text-anchor="middle">THE PIPELINE</text>
+
+  <g transform="translate(100, 120)">
+    <!-- Line connecting steps -->
+    <line x1="40" y1="0" x2="960" y2="0" stroke="url(#lineGrad)" stroke-width="4" stroke-opacity="0.3" />
+    <line x1="40" y1="0" x2="960" y2="0" stroke="url(#lineGrad)" stroke-width="4" stroke-dasharray="50 1200">
+      <animate attributeName="stroke-dashoffset" from="1200" to="-100" dur="3s" repeatCount="indefinite" />
+    </line>
+
+    <!-- Step 1 -->
+    <circle cx="40" cy="0" r="12" fill="#00d4ff" />
+    <text x="40" y="40" font-family="monospace" font-size="14" fill="#00d4ff" font-weight="bold" text-anchor="middle">1. SUBMIT SPECS</text>
+    <text x="40" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#8892b0" text-anchor="middle">Via Client Portal</text>
+
+    <!-- Step 2 -->
+    <circle cx="500" cy="0" r="12" fill="#00ff88" />
+    <text x="500" y="40" font-family="monospace" font-size="14" fill="#00ff88" font-weight="bold" text-anchor="middle">2. GROK ANALYSIS</text>
+    <text x="500" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#8892b0" text-anchor="middle">Automated Audit</text>
+
+    <!-- Step 3 -->
+    <circle cx="960" cy="0" r="12" fill="#ff3366" />
+    <text x="960" y="40" font-family="monospace" font-size="14" fill="#ff3366" font-weight="bold" text-anchor="middle">3. 1-ON-1 TUNING</text>
+    <text x="960" y="60" font-family="-apple-system, sans-serif" font-size="14" fill="#8892b0" text-anchor="middle">Manual Expert Tweaks</text>
+  </g>
+</svg>
