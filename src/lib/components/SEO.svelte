@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	export let title = 'FrameForge | Ultimate PC Optimization for Gamers';
-	export let description = 'AI-powered PC optimization. Unlock every frame, reduce input lag, and dominate your matches with game-specific profiles.';
-	export let image = 'https://frameforge.gg/og-image.jpg';
+	export let title = 'JUGSEC | Premium 1-on-1 PC Optimization by Theo';
+	export let description = 'Premium 1-on-1 PC optimization service by Theo. Custom BIOS, OS, and hardware tweaks applied manually for competitive esports.';
+	export let image = 'https://jugsec.com/og-image.jpg';
 	export let type = 'website';
 
 	$: url = $page.url.origin + $page.url.pathname;
@@ -30,3 +30,4 @@
 	<!-- Canonical -->
 	<link rel="canonical" href={url} />
 </svelte:head>
+

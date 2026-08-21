@@ -29,8 +29,8 @@
 
 	const faqs = [
 		{
-			q: 'Is FrameForge safe to use?',
-			a: 'Yes, absolutely. FrameForge only recommends safe, tested settings and never suggests overclocking or modifying critical system files that could damage your hardware.'
+			q: 'Is this optimization safe?',
+			a: 'Yes, absolutely. JUGSEC only recommends safe, tested settings and never suggests overclocking or modifying critical system files that could damage your hardware.'
 		},
 		{
 			q: 'Do I need to install anything?',
@@ -45,7 +45,7 @@
 			a: 'Yes! Most users see a 20-50% improvement in 1% low framerates and a 10-30% boost in average FPS, depending on their hardware and how unoptimized their system was initially.'
 		},
 		{
-			q: 'How does the AI analysis work?',
+			q: 'How does the remote session work?',
 			a: 'Our proprietary engine scans your specific hardware combination, drivers, and OS version, then cross-references it with a database of millions of optimal configurations to find your exact bottlenecks.'
 		}
 	];
@@ -65,7 +65,7 @@
 				<div class="relative w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:bg-accent/20 transition-colors">
 					<Zap class="w-5 h-5 text-accent" />
 				</div>
-				<span class="text-xl font-black tracking-tight">FrameForge</span>
+				<span class="text-xl font-black tracking-tight">JUGSEC</span>
 			</a>
 
 			<!-- Desktop Nav -->
@@ -129,7 +129,7 @@
 			<div class="container relative z-10 px-6 mx-auto max-w-4xl">
 				<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-2 border border-border-default text-xs font-semibold text-text-secondary mb-8">
 					<Sparkles class="w-4 h-4 text-neon" />
-					<span>FrameForge AI Engine v2.0 is live</span>
+					<span>JUGSEC AI Engine v2.0 is live</span>
 				</div>
 				
 				<h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
@@ -138,12 +138,12 @@
 				</h1>
 				
 				<p class="text-lg md:text-xl text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
-					AI-powered optimization that gives competitive gamers the edge. More FPS. Less input lag. Zero guesswork.
+					Premium 1-on-1 PC optimization service by Theo. Deep manual BIOS and OS tuning for competitive players who need absolute zero input lag and maximum frames.
 				</p>
 				
 				<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
 					<a href="/register" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-accent text-void font-bold text-lg shadow-[0_0_30px_rgba(0,212,255,0.4)] hover:shadow-[0_0_50px_rgba(0,212,255,0.6)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
-						Start Free Scan
+						Book Your Session
 						<ArrowRight class="w-5 h-5" />
 					</a>
 					<a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface-1 border border-border-default hover:border-border-strong text-lg font-semibold hover:bg-surface-2 transition-all flex items-center justify-center">
@@ -218,14 +218,14 @@
 		<section id="features" class="py-20 md:py-32 bg-surface-1/30 relative">
 			<div class="container mx-auto px-6 max-w-6xl">
 				<div class="text-center mb-16">
-					<h2 class="text-3xl md:text-5xl font-black mb-4">FrameForge Handles <span class="text-accent">Everything</span></h2>
+					<h2 class="text-3xl md:text-5xl font-black mb-4">JUGSEC Handles <span class="text-accent">Everything</span></h2>
 					<p class="text-lg text-text-secondary max-w-2xl mx-auto">Our platform automates the complex optimization process, giving you pro-level performance safely and quickly.</p>
 				</div>
 				
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<div class="bg-surface-1 border border-border-subtle hover:border-border-strong rounded-2xl p-8 group transition-all">
 						<Cpu class="w-8 h-8 text-accent mb-6 group-hover:scale-110 transition-transform" />
-						<h3 class="text-xl font-bold mb-3">AI System Analysis</h3>
+						<h3 class="text-xl font-bold mb-3">1-on-1 Expert Audit</h3>
 						<p class="text-text-secondary text-sm leading-relaxed">Scans your unique hardware specs and identifies specific bottlenecks holding back your framerates.</p>
 					</div>
 					<div class="bg-surface-1 border border-border-subtle hover:border-border-strong rounded-2xl p-8 group transition-all">
@@ -250,7 +250,7 @@
 					</div>
 					<div class="bg-surface-1 border border-border-subtle hover:border-border-strong rounded-2xl p-8 group transition-all">
 						<TrendingUp class="w-8 h-8 text-accent mb-6 group-hover:scale-110 transition-transform" />
-						<h3 class="text-xl font-bold mb-3">Smart Recommendations</h3>
+						<h3 class="text-xl font-bold mb-3">Custom Tuning</h3>
 						<p class="text-text-secondary text-sm leading-relaxed">Tweaks are prioritized by actual impact on your frame times, not just random suggestions.</p>
 					</div>
 				</div>
@@ -276,13 +276,13 @@
 					
 					<div class="relative flex flex-col items-center text-center">
 						<div class="w-24 h-24 rounded-2xl bg-surface-2 border-2 border-accent flex items-center justify-center text-3xl font-black text-accent mb-6 z-10 shadow-[0_0_20px_rgba(0,212,255,0.2)]">2</div>
-						<h3 class="text-2xl font-bold mb-3">Run AI Scan</h3>
+						<h3 class="text-2xl font-bold mb-3">Initial Spec Audit</h3>
 						<p class="text-text-secondary">Our engine analyzes your configuration and identifies performance leaks.</p>
 					</div>
 					
 					<div class="relative flex flex-col items-center text-center">
 						<div class="w-24 h-24 rounded-2xl bg-accent flex items-center justify-center text-3xl font-black text-void mb-6 z-10 shadow-[0_0_30px_rgba(0,212,255,0.4)]">3</div>
-						<h3 class="text-2xl font-bold mb-3">Apply & Dominate</h3>
+						<h3 class="text-2xl font-bold mb-3">Remote Optimization</h3>
 						<p class="text-text-secondary">Follow the guided optimizations, boost your FPS, and climb the ranks.</p>
 					</div>
 				</div>
@@ -406,7 +406,7 @@
 			
 			<div class="container mx-auto px-6 relative z-10 text-center">
 				<h2 class="text-4xl md:text-6xl font-black mb-6">Ready to Unlock Your <br class="hidden md:block" />Full Potential?</h2>
-				<p class="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">Stop letting bad settings hold back your rank. Join thousands of competitive players optimizing with FrameForge.</p>
+				<p class="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">Stop letting bad settings hold back your rank. Join thousands of competitive players optimizing with JUGSEC.</p>
 				<a href="/register" class="inline-flex items-center gap-2 px-10 py-5 rounded-xl bg-accent text-void font-bold text-xl shadow-[0_0_40px_rgba(0,212,255,0.4)] hover:shadow-[0_0_60px_rgba(0,212,255,0.6)] hover:-translate-y-1 transition-all">
 					Start Optimizing Now
 					<Zap class="w-6 h-6" />
@@ -424,7 +424,7 @@
 						<div class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center border border-accent/20">
 							<Zap class="w-5 h-5 text-accent" />
 						</div>
-						<span class="text-xl font-black tracking-tight">FrameForge</span>
+						<span class="text-xl font-black tracking-tight">JUGSEC</span>
 					</a>
 					<p class="text-text-secondary text-sm leading-relaxed mb-6">
 						Premium PC optimization for competitive gamers. Maximize frames, minimize latency, dominate the lobby.
@@ -463,7 +463,7 @@
 			
 			<div class="border-t border-border-subtle pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 				<p class="text-sm text-text-tertiary">
-					&copy; {new Date().getFullYear()} FrameForge. All rights reserved.
+					&copy; {new Date().getFullYear()} JUGSEC. All rights reserved.
 				</p>
 				<div class="flex items-center gap-6">
 					<!-- Social Links placeholders -->
@@ -475,5 +475,6 @@
 		</div>
 	</footer>
 </div>
+
 
 
