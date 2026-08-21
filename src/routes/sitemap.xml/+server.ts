@@ -1,16 +1,16 @@
 export const GET = async ({ url }) => {
-	const site = url.origin;
+  const site = url.origin;
 
-	const pages = [
-		'',
-		'/auth/login',
-		'/auth/register',
-		'/proof',
-		'/legal/privacy',
-		'/legal/terms'
-	];
+  const pages = [
+    "",
+    "/auth/login",
+    "/auth/register",
+    "/proof",
+    "/legal/privacy",
+    "/legal/terms",
+  ];
 
-	const sitemap = `
+  const sitemap = `
 		<?xml version="1.0" encoding="UTF-8" ?>
 		<urlset
 			xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -21,23 +21,23 @@ export const GET = async ({ url }) => {
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
 			${pages
-				.map(
-					(page) => `
+        .map(
+          (page) => `
 			<url>
 				<loc>${site}${page}</loc>
 				<changefreq>daily</changefreq>
-				<priority>${page === '' ? '1.0' : '0.8'}</priority>
+				<priority>${page === "" ? "1.0" : "0.8"}</priority>
 			</url>
-			`
-				)
-				.join('')}
+			`,
+        )
+        .join("")}
 		</urlset>
 	`.trim();
 
-	return new Response(sitemap, {
-		headers: {
-			'Content-Type': 'application/xml',
-			'Cache-Control': 'max-age=0, s-maxage=3600'
-		}
-	});
+  return new Response(sitemap, {
+    headers: {
+      "Content-Type": "application/xml",
+      "Cache-Control": "max-age=0, s-maxage=3600",
+    },
+  });
 };

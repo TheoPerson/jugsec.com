@@ -35,25 +35,31 @@ Ce repository suit les standards d'ingénierie les plus stricts, inspirés des w
 ## 🚀 Lancement Rapide (Dev)
 
 ### 1. Variables d'environnement
+
 Copiez le fichier d'exemple :
+
 ```bash
 cp .env.example .env
 ```
+
 Remplissez votre `DATABASE_URL` (Supabase, Neon, ou local).
 
 > **Bloqué sur Supabase (Permissions) ?**
-> Si vous voyez l'erreur *« You need additional permissions to create a project »* (comme sur l'organisation *Alan Data Base*), retournez à l'accueil Supabase et **créez une nouvelle organisation personnelle gratuite** depuis le menu de gauche, puis créez-y votre projet.
+> Si vous voyez l'erreur _« You need additional permissions to create a project »_ (comme sur l'organisation _Alan Data Base_), retournez à l'accueil Supabase et **créez une nouvelle organisation personnelle gratuite** depuis le menu de gauche, puis créez-y votre projet.
 
 ### 2. Installation & Base de données
+
 ```bash
 pnpm install
 pnpm db:push
 ```
 
 ### 3. Démarrage
+
 ```bash
 pnpm dev
 ```
+
 Rendez-vous sur [http://localhost:5173](http://localhost:5173) pour voir la magie opérer.
 
 ## 📁 Structure du Projet
@@ -63,7 +69,7 @@ frameforge/
 ├── src/
 │   ├── lib/
 │   │   ├── components/       # UI (SEO, Buttons, Cards)
-│   │   ├── server/           
+│   │   ├── server/
 │   │   │   ├── auth.ts       # Logique JWT & bcrypt
 │   │   │   ├── db/           # Schéma Drizzle
 │   │   │   └── services/     # Moteur IA & Profils de jeux
@@ -77,11 +83,14 @@ frameforge/
 ```
 
 ## 🧪 Tests (QA)
+
 L'infrastructure est prête pour le testing automatisé (Vitest / Playwright).
+
 ```bash
 pnpm check      # Svelte-check (Typescript strict)
 pnpm lint       # ESLint & Prettier
 ```
 
 ---
-*Construit avec passion pour l'esport et la performance pure.*
+
+_Construit avec passion pour l'esport et la performance pure._

@@ -40,13 +40,13 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@google/genai": "^2.17.0",
     "@lucide/svelte": "^1.33.0",
     "@sveltejs/kit": "^2.70.2",
     "bcryptjs": "^3.0.2",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.2",
     "lucide-svelte": "^1.0.1",
+    "openai": "^7.5.0",
     "postgres": "^3.4.9",
     "tailwind-merge": "^3.6.0",
     "tailwind-variants": "^3.3.1"
