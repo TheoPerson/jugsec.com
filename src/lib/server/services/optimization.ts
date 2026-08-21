@@ -37,7 +37,7 @@ export async function runOptimizationScan(userId: string, profileId: string) {
     const scores = calculateScores(profile, recommendations);
 
     let aiAnalysis: string | null = null;
-    if (process.env.GEMINI_API_KEY) {
+    if (process.env.XAI_API_KEY) {
       aiAnalysis = await getAIAnalysis(profile);
     }
 
@@ -348,13 +348,16 @@ function calculateScores(
   };
 }
 
-/** Analyse IA via Google Gemini (optionnel) */
-async function getAIAnalysis(
-  profile: typeof systemProfiles.$inferSelect,
-): Promise<string | null> {
+/** Analyse IA via xAI Grok */
+import OpenAI from 'openai';
+
+async function getAIAnalysis(profile: typeof systemProfiles.$inferSelect): Promise<string | null> {
+  if (!process.env.XAI_API_KEY) return 'AI analysis skipped: No XAI_API_KEY provided.';
   try {
-    const { GoogleGenAI } = await import("@google/genai");
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
+    const openai = new OpenAI({
+      apiKey: process.env.XAI_API_KEY,
+      baseURL: 'https://api.x.ai/v1',
+    });
 
     const prompt = `You are an expert PC optimization specialist for competitive gaming. Analyze this gaming PC setup and provide a brief, actionable performance summary (3-4 sentences max).
 
@@ -368,13 +371,16 @@ System Specs:
 
 Focus on: bottlenecks, the single most impactful upgrade, and whether this rig is competitive-ready.`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
-      contents: prompt,
+    const response = await openai.chat.completions.create({
+      model: "grok-4.6",
+      messages: [{ role: "user", content: prompt }],
+      max_tokens: 150
     });
 
-    return response.text ?? null;
-  } catch {
+    return response.choices[0].message.content ?? null;
+  } catch (error) {
+    console.error("Grok error:", error);
     return null;
   }
 }
+
