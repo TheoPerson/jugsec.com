@@ -2,7 +2,7 @@
   <img src="./static/favicon.svg" width="80" alt="JUGSEC Logo" />
   <h1 align="center">JUGSEC</h1>
   <p align="center">
-    <strong>Premium 1-on-1 PC Optimization Service by Theo</strong>
+    <strong>Premium 1-on-1 PC Optimization Service</strong>
     <br />
     <i>Zero input lag. Maximum FPS. Real human expertise.</i>
   </p>
@@ -18,7 +18,7 @@
 
 ## 🎯 About
 
-**JUGSEC** is a premium, 1-on-1 PC optimization service run by Theo. No automated snake-oil software—just deep, manual hardware and OS tuning (BIOS, Registry, GPU, Windows) for competitive esports players who need zero input lag and maximum stable frames.
+**JUGSEC** is a premium, 1-on-1 PC optimization service run by a dedicated expert. No automated snake-oil software—just deep, manual hardware and OS tuning (BIOS, Registry, GPU, Windows) for competitive esports players who need zero input lag and maximum stable frames.
 
 This repository hosts the client portal and booking system. Clients can register, input their PC specifications, and get an initial technical audit (powered by Grok 4.6) before their 1-on-1 remote tuning session.
 
@@ -62,3 +62,4 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ---
 
 _Built for pure competitive performance._
+

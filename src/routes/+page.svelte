@@ -138,7 +138,7 @@
 				</h1>
 				
 				<p class="text-lg md:text-xl text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
-					Premium 1-on-1 PC optimization service by Theo. Deep manual BIOS and OS tuning for competitive players who need absolute zero input lag and maximum frames.
+					Premium 1-on-1 PC optimization service. Deep manual BIOS and OS tuning for competitive players who need absolute zero input lag and maximum frames.
 				</p>
 				
 				<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -475,6 +475,7 @@
 		</div>
 	</footer>
 </div>
+
 
 
 
