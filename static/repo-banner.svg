@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#14141e" />
+      <stop offset="100%" stop-color="#0a0a0f" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.04" />
+    </pattern>
+    <linearGradient id="text-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#8892b0" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#grid)" rx="16" />
+  
+  <!-- Cyber/Radar element -->
+  <g transform="translate(620, 140)">
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.15" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="4 6" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#00ff88" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="15 10" />
+    <circle cx="0" cy="0" r="3" fill="#00ff88" />
+    <line x1="-100" y1="0" x2="100" y2="0" stroke="#00d4ff" stroke-opacity="0.1" />
+    <line x1="0" y1="-100" x2="0" y2="100" stroke="#00d4ff" stroke-opacity="0.1" />
+    
+    <!-- Target marker -->
+    <path d="M 30 30 L 40 30 M 30 30 L 30 40" fill="none" stroke="#00ff88" stroke-width="2" />
+    <circle cx="45" cy="-25" r="3" fill="#00d4ff" />
+  </g>
+
+  <!-- Typography -->
+  <text x="60" y="80" font-family="monospace" font-size="10" font-weight="600" fill="#8892b0" letter-spacing="2">● JUGSEC / OPTIMIZATION</text>
+  
+  <text x="58" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="900" fill="url(#text-glow)" letter-spacing="4">JUGSEC</text>
+  
+  <rect x="60" y="155" width="280" height="24" rx="4" fill="#00d4ff" fill-opacity="0.1" />
+  <text x="70" y="171" font-family="monospace" font-size="12" font-weight="600" fill="#00d4ff" letter-spacing="1">> Premium PC Optimization System _</text>
+  
+  <text x="60" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#8892b0">Zero input lag • Maximum FPS • 1-on-1 Manual Tuning</text>
+</svg>
