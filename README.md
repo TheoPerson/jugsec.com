@@ -1,128 +1,87 @@
 <div align="center">
-  <br />
+  <img src="./static/favicon.svg" width="80" alt="FrameForge Logo" />
+  <h1 align="center">FrameForge</h1>
+  <p align="center">
+    <strong>L'ultime plateforme d'optimisation PC pour les joueurs compétitifs (Esport)</strong>
+    <br />
+    <i>Zéro lag. Plus de FPS. Des clics plus rapides.</i>
+  </p>
 
-# ⚡ FrameForge
-
-**AI-Powered PC Optimization for Competitive Gamers**
-
-[![SvelteKit](https://img.shields.io/badge/SvelteKit-5-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)](https://kit.svelte.dev/)
-[![Drizzle](https://img.shields.io/badge/Drizzle_ORM-PostgreSQL-C5F74F?style=for-the-badge)](https://orm.drizzle.team/)
-[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-
-  <br />
-
-_Unlock every frame. Eliminate every bottleneck. Dominate every match._
-
+  <p align="center">
+    <a href="https://svelte.dev"><img src="https://img.shields.io/badge/SvelteKit-5-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="SvelteKit 5" /></a>
+    <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS v4" /></a>
+    <a href="https://orm.drizzle.team/"><img src="https://img.shields.io/badge/Drizzle_ORM-PostgreSQL-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black" alt="Drizzle ORM" /></a>
+    <a href="https://vercel.com"><img src="https://img.shields.io/badge/Vercel-Edge_Ready-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" /></a>
+  </p>
 </div>
 
 ---
 
-## 🎯 What is FrameForge?
+## 🎯 Vision
 
-FrameForge is a premium web platform that helps competitive gamers optimize their PC for maximum performance. Enter your specs, run an AI-powered scan, and get prioritized, game-specific recommendations — no more digging through Reddit threads and YouTube videos.
+**FrameForge** est conçu pour les joueurs exigeants (Valorant, CS2, Fortnite). L'objectif est simple : auditer automatiquement ta configuration matérielle et fournir les recommandations d'optimisation (BIOS, OS, Registre, GPU, In-Game) générant le plus haut retour sur investissement en termes de FPS et de réduction d'input lag.
 
-### Core Features
+## 🏗️ Architecture "Startup Grade"
 
-- **🤖 AI System Analysis** — Gemini-powered scan of your hardware, generating personalized optimization recommendations
-- **🎮 Game-Specific Profiles** — Curated optimization presets for Valorant, CS2, Fortnite, Apex Legends, and more
-- **📊 Performance Scoring** — Overall + per-category scores (CPU, GPU, RAM, Storage, Network) on a 0-100 scale
-- **📋 Step-by-Step Guides** — Clear instructions for every recommendation, rated by difficulty and impact
-- **📈 History Tracking** — Track optimizations applied and performance improvements over time
+Ce repository suit les standards d'ingénierie les plus stricts, inspirés des workflows Vercel/TheoPerson :
 
----
+- **Frontend SSR** : SvelteKit 5 (Runes).
+- **Design System** : Tailwind v4 avec tokens personnalisés (`@theme`).
+- **Base de Données** : PostgreSQL via Drizzle ORM (zéro vendor-lock, migrations claires).
+- **Sécurité** : Auth custom avec Bcrypt + JWT (Cookies `HttpOnly`, `SameSite=Lax`).
+- **SEO & SMO** : Génération dynamique de `sitemap.xml`, `robots.txt`, et balises OpenGraph universelles.
+- **Intelligence Artificielle** : Moteur d'analyse de bottleneck basé sur Google Gemini 2.0 Flash.
 
-## 🛠️ Tech Stack
+## 🚀 Lancement Rapide (Dev)
 
-| Layer               | Technology                                                                           |
-| ------------------- | ------------------------------------------------------------------------------------ |
-| **Framework**       | [SvelteKit 5](https://kit.svelte.dev/) (Svelte 5 runes)                              |
-| **Language**        | [TypeScript](https://www.typescriptlang.org/) (strict)                               |
-| **Database**        | [PostgreSQL](https://www.postgresql.org/) + [Drizzle ORM](https://orm.drizzle.team/) |
-| **Styling**         | [Tailwind CSS v4](https://tailwindcss.com/)                                          |
-| **AI**              | [Google Gemini](https://ai.google.dev/)                                              |
-| **Hosting**         | [Vercel](https://vercel.com/)                                                        |
-| **Package Manager** | pnpm                                                                                 |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 20+
-- pnpm 9+
-- PostgreSQL database (Neon, Supabase, or local)
-
-### Installation
-
+### 1. Variables d'environnement
+Copiez le fichier d'exemple :
 ```bash
-git clone <your-repo-url>
-cd frameforge
 cp .env.example .env
-# Edit .env with your database URL and optional Gemini API key
+```
+Remplissez votre `DATABASE_URL` (Supabase, Neon, ou local).
+
+> **Bloqué sur Supabase (Permissions) ?**
+> Si vous voyez l'erreur *« You need additional permissions to create a project »* (comme sur l'organisation *Alan Data Base*), retournez à l'accueil Supabase et **créez une nouvelle organisation personnelle gratuite** depuis le menu de gauche, puis créez-y votre projet.
+
+### 2. Installation & Base de données
+```bash
 pnpm install
 pnpm db:push
+```
+
+### 3. Démarrage
+```bash
 pnpm dev
 ```
+Rendez-vous sur [http://localhost:5173](http://localhost:5173) pour voir la magie opérer.
 
-Your FrameForge instance will be running at `http://localhost:5173`.
+## 📁 Structure du Projet
 
-### Environment Variables
-
-| Variable         | Required | Description                                 |
-| ---------------- | -------- | ------------------------------------------- |
-| `DATABASE_URL`   | ✅       | PostgreSQL connection string                |
-| `SESSION_SECRET` | ✅       | Random string for session security          |
-| `GEMINI_API_KEY` | ❌       | Google Gemini API key (enables AI analysis) |
-
----
-
-## 📁 Project Structure
-
+```text
+frameforge/
+├── src/
+│   ├── lib/
+│   │   ├── components/       # UI (SEO, Buttons, Cards)
+│   │   ├── server/           
+│   │   │   ├── auth.ts       # Logique JWT & bcrypt
+│   │   │   ├── db/           # Schéma Drizzle
+│   │   │   └── services/     # Moteur IA & Profils de jeux
+│   │   └── utils.ts          # Helpers (cn, scores)
+│   └── routes/               # Pages (App Router SvelteKit)
+│       ├── (landing)/        # /, /proof, /legal
+│       ├── auth/             # Login & Register
+│       ├── dashboard/        # Espace utilisateur protégé
+│       ├── sitemap.xml/      # SEO dynamique
+│       └── robots.txt/       # SEO statique
 ```
-src/
-├── app.css                    # Design system (Tailwind v4 @theme)
-├── app.html                   # HTML shell
-├── app.d.ts                   # Type declarations
-├── hooks.server.ts            # Auth middleware
-├── lib/
-│   ├── utils.ts               # Shared utilities
-│   ├── server/
-│   │   ├── auth.ts            # Authentication (bcrypt, sessions)
-│   │   ├── db/
-│   │   │   ├── schema.ts      # Drizzle ORM schema
-│   │   │   └── index.ts       # Database connection
-│   │   └── services/
-│   │       ├── optimization.ts # AI optimization engine
-│   │       └── game-profiles.ts # Game-specific presets
-│   └── components/            # Reusable UI components
-├── routes/
-│   ├── +page.svelte           # Landing page
-│   ├── auth/                  # Login, register, logout
-│   └── dashboard/             # Protected dashboard
-│       ├── scan/              # Run optimization scan
-│       ├── system/            # Edit PC specs
-│       ├── games/             # Browse game profiles
-│       ├── history/           # Optimization timeline
-│       └── settings/          # Account settings
+
+## 🧪 Tests (QA)
+L'infrastructure est prête pour le testing automatisé (Vitest / Playwright).
+```bash
+pnpm check      # Svelte-check (Typescript strict)
+pnpm lint       # ESLint & Prettier
 ```
 
 ---
-
-## 🗄️ Database Schema
-
-| Table                  | Purpose                              |
-| ---------------------- | ------------------------------------ |
-| `users`                | User accounts with tier (free/pro)   |
-| `sessions`             | Database-backed auth sessions        |
-| `system_profiles`      | User's PC hardware specs             |
-| `optimization_scans`   | AI scan results with scores          |
-| `game_profiles`        | Per-game optimization presets        |
-| `user_game_profiles`   | Applied game profiles                |
-| `optimization_history` | Audit trail of applied optimizations |
-
----
-
-## 📄 License
-
-MIT
+*Construit avec passion pour l'esport et la performance pure.*
